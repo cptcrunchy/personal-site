@@ -1,13 +1,14 @@
 jQuery(document).ready(function($){
+  
 	//toggle 3d navigation
-	$('.cd-3d-nav-trigger').on('click', function(){
-		toggle3dBlock(!$('.cd-header').hasClass('nav-is-visible'));
+	$('.nav-trigger').on('click', function(){
+		toggle3dBlock(!$('.header').hasClass('nav-is-visible'));
 	});
 
 	//select a new item from the 3d navigation
-	$('.cd-3d-nav').on('click', 'a', function(){
+	$('.nav').on('click', 'a', function(){
 		var selected = $(this);
-		selected.parent('li').addClass('cd-selected').siblings('li').removeClass('cd-selected');
+		selected.parent('li').addClass('selected').siblings('li').removeClass('selected');
 		updateSelectedNav('close');
 	});
 
@@ -17,23 +18,23 @@ jQuery(document).ready(function($){
 
 	function toggle3dBlock(addOrRemove) {
 		if(typeof(addOrRemove)==='undefined') addOrRemove = true;	
-		$('.cd-header').toggleClass('nav-is-visible', addOrRemove);
-		$('.cd-3d-nav-container').toggleClass('nav-is-visible', addOrRemove);
+		$('.header').toggleClass('nav-is-visible', addOrRemove);
+		$('.nav-container').toggleClass('nav-is-visible', addOrRemove);
 		$('main').toggleClass('nav-is-visible', addOrRemove).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
 			//fix marker position when opening the menu (after a window resize)
 			addOrRemove && updateSelectedNav();
 		});
 	}
 
-	//this function update the .cd-marker position
+	//this function update the .marker position
 	function updateSelectedNav(type) {
-		var selectedItem = $('.cd-selected'),
-			selectedItemPosition = selectedItem.index() + 1, 
+		var selectedItem = $('.selected'),
+			selectedItemPosition = selectedItem.index(), 
 			leftPosition = selectedItem.offset().left,
 			backgroundColor = selectedItem.data('color'),
-			marker = $('.cd-marker');
+			marker = $('.marker');
 
-		marker.removeClassPrefix('color').addClass('color-'+ selectedItemPosition).css({
+		marker.removeClassPrefix('color').addClass('color').css({
 			'left': leftPosition,
 		});
 		if( type == 'close') {

@@ -51,7 +51,7 @@ jQuery(document).ready(function($){
 					newWidth = spanWrapper.width() + 10
 				spanWrapper.css('width', newWidth);
 			} else if (!headline.hasClass('type') ) {
-				//assign to .words-wrapper the width of its longest word
+				//assign to .cd-words-wrapper the width of its longest word
 				var words = headline.find('.words-wrapper b'),
 					width = 0;
 				words.each(function(){
@@ -134,7 +134,7 @@ jQuery(document).ready(function($){
 		if(!$letter.is(':last-child')) { 
 			setTimeout(function(){ showLetter($letter.next(), $word, $bool, $duration); }, $duration); 
 		} else { 
-			if($word.parents('.headline').hasClass('type')) { setTimeout(function(){ $word.parents('.words-wrapper').addClass('waiting'); }, 200);}
+			if($word.parents('.cd-headline').hasClass('type')) { setTimeout(function(){ $word.parents('.cd-words-wrapper').addClass('waiting'); }, 200);}
 			if(!$bool) { setTimeout(function(){ hideWord($word) }, animationDelay) }
 		}
 	}
