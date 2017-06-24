@@ -468,11 +468,11 @@ main.nav-is-visible {
 }
 
 @media only screen and (min-width: 768px) {
-    #cd-intro {
+    #intro {
         height: 400px;
         margin-top: 70px;
     }
-    #cd-intro h1 {
+    #intro h1 {
         font-size: 30px;
         font-size: 1.875rem;
     }
