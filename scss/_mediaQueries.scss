@@ -1,0 +1,40 @@
+@media only screen and (min-width: 768px) {
+    .title {
+        line-height: 250px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .title {
+        height: 200px;
+        line-height: 300px;
+    }
+    .title h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .intro {
+        margin: 5em auto;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .intro {
+        margin: 6em auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .headline {
+        font-size: 4.4rem;
+        font-weight: 300;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .headline {
+        font-size: 6rem;
+    }
+}
