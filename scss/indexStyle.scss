@@ -1,0 +1,21 @@
+@import "indexPartials/_indexVariables.scss";
+@import "indexPartials/_primaryColors.scss";
+@import "indexPartials/_intro.scss";
+@import "_navigation.scss";
+@import "indexPartials/_mediaQueries.scss";
+.container {
+    width: auto;
+    height: 100vh;
+    content: '';
+    display: block;
+    /*position: absolute;
+    left: 0;
+    top: 0;*/
+    z-index: 1;
+    opacity: 0.8;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
