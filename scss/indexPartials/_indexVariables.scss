@@ -77,9 +77,9 @@ a {
                 background-color: #aebcb9;
             }
             &.waiting::after {
-                -webkit-animation: cd-pulse 1s infinite;
-                -moz-animation: cd-pulse 1s infinite;
-                animation: cd-pulse 1s infinite;
+                -webkit-animation: pulse 1s infinite;
+                -moz-animation: pulse 1s infinite;
+                animation: pulse 1s infinite;
             }
             &.selected {
                 background-color: #aebcb9;
