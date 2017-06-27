@@ -5,12 +5,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- CSS reset -->
+  <link rel="stylesheet" href="css/aboutStyle.css">
+  <link rel="stylesheet" href="css/navigationStyle.css">
   <title>About Me</title>
 </head>
 
 <body>
+  <header class="header">
+    <a href="#" class="nav-trigger">
+			Menu
+			<span></span>
+		</a>
+  </header>
+  <!-- . header -->
+  <nav class="nav-container">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
 
-  <p>Need to finish about me.</p>
+      <li><a href="/pdf/web/viewer.html?file=Jason_Resume_2017.pdf">Resume</a></li>
+
+      <li><a href="contact-me.html">Contact</a></li>
+
+      <li><a href="https://github.com/cptcrunchy">Github</a></li>
+
+      <li><a href="https://www.linkedin.com/in/jgutierrez84/">Linkedin</a></li>
+
+      <li class="selected"><a href="about.html">About</a></li>
+    </ul>
+    <!-- .nav -->
+    <span class="marker color-1"></span>
+  </nav>
+
+  <main>
+    <header class="cd-section">
+      <div class="cd-container">
+        <h1>Team Hidden Bio</h1>
+        <p>Scroll down and click on a team member picture</p>
+      </div>
+      <!-- cd-container -->
+    </header>
+
+    <section id="cd-team" class="cd-section">
+      <div class="cd-container">
+        <h2>My Projects</h2>
+        <ul>
+          <!-- Each li is a project -->
+          <li>
+            <a href="#0" data-type="member-1">
+              <figure>
+                <img src="../img/team-member-1.jpg" alt="Team member 1">
+                <div class="cd-img-overlay"><span>View Bio</span></div>
+              </figure>
+
+              <div class="cd-member-info">
+                Google <span>Maps</span>
+              </div>
+              <!-- cd-member-info -->
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- cd-container -->
+    </section>
+    <!-- cd-team -->
+
+    <div class="cd-overlay"></div>
+  </main>
+
+  <div class="cd-member-bio member-1">
+    <div class="cd-member-bio-pict">
+      <img src="img/member-bio-img-1.jpg" alt="Member Bio image">
+    </div>
+    <!-- cd-member-bio-pict -->
+
+    <div class="cd-bio-content">
+      <h1>Google Map Project</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, amet, voluptatibus et omnis dolore illo saepe voluptatem qui quibusdam sunt corporis ut iure repellendus delectus voluptate explicabo temporibus quos eaque?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, explicabo, doloribus, esse rem officia quas facilis eius alias similique ducimus amet quam odio perspiciatis dolorem ipsam! Ab, dolores, adipisci, explicabo pariatur illum deleniti quam
+        iusto placeat nisi aliquam praesentium mollitia eligendi a! Sequi, voluptatibus sed quos possimus harum rem tempore fugiat? Corporis, officia, assumenda, asperiores blanditiis quidem aliquam fugiat vel excepturi velit provident aut omnis quos
+        aliquid tempora eaque. Nemo, eveniet, sint maxime eum maiores totam est inventore numquam voluptatem hic nam blanditiis placeat illum nesciunt voluptatum eos cum quos magni voluptates ipsam. Perspiciatis alias ducimus libero. Quo provident omnis
+        fugiat ut repellendus optio cum quaerat odio et ipsa. Molestias, atque repellat non maxime amet corporis magni libero quam numquam error beatae at asperiores et a porro nostrum ab necessitatibus esse aliquid iure repellendus obcaecati unde quo
+        eius eum dolores quasi consectetur culpa velit optio! Sequi, dolor, minima, veniam doloribus in ullam cupiditate iste animi ipsum esse eaque similique illo temporibus magni et earum amet sint deleniti est reiciendis. Maxime, quis, animi, ad quasi
+        adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.</p>
+    </div>
+    <!-- cd-bio-content -->
+  </div>
+  <!-- cd-member-bio -->
+  <a href="#0" class="cd-member-bio-close">Close</a>
+  <!-- close the author bio section -->
+
+  <script src="./js/jquery-2.1.4.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/navigation.js"></script>
+
 </body>
 
 </html>
