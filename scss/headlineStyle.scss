@@ -1,0 +1,251 @@
+@import 'bourbon/bourbon'; // http://bourbon.io/
+@import '../partials/variables'; // colors, fonts etc...
+@import '../partials/mixins'; // custom mixins
+@import '../partials/layout'; // responsive grid and media queries
+@import '../partials/defaults'; // Primary elements
+
+/* -------------------------------- 
+Headline components
+-------------------------------- */
+
+.title {
+  position: relative;
+  height: 160px;
+  line-height: 230px;
+  text-align: center;
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  @include MQ(M) {
+    line-height: 250px;
+  }
+  @include MQ(L) {
+    height: 200px;
+    line-height: 300px;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.intro {
+  width: 90%;
+  max-width: $M;
+  text-align: center;
+}
+
+.intro {
+  margin: 4em auto;
+  @include MQ(M) {
+    margin: 2em auto;
+  }
+  @include MQ(L) {
+    margin: 6em auto;
+  }
+}
+
+.headline {
+  font-size: 3rem;
+  line-height: 1.2;
+  @include MQ(M) {
+    font-size: 3.4rem;
+    font-weight: 300;
+  }
+  @include MQ(L) {
+    font-size: 6rem;
+  }
+}
+
+.words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  b {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+    &.is-visible {
+      position: relative;
+    }
+  }
+  .no-js & b {
+    opacity: 0;
+    &.is-visible {
+      opacity: 1;
+    }
+  }
+}
+
+
+/* -------------------------------- 
+Index typing headline
+-------------------------------- */
+
+.headline.type {
+  .words-wrapper {
+    vertical-align: top;
+    overflow: hidden;
+    &::after {
+      /* vertical bar */
+      content: '';
+      position: absolute;
+      right: 0;
+      @include center(y);
+      height: 90%;
+      width: 1px;
+      background-color: $color-1;
+    }
+    &.waiting::after {
+      @include animation(cd-pulse 1s infinite);
+    }
+    &.selected {
+      background-color: $color-1;
+      &::after {
+        visibility: hidden;
+      }
+      b {
+        color: $color-3;
+      }
+    }
+  }
+  b {
+    visibility: hidden;
+    &.is-visible {
+      visibility: visible;
+    }
+  }
+  i {
+    position: absolute;
+    visibility: hidden;
+    &.in {
+      position: relative;
+      visibility: visible;
+    }
+  }
+}
+
+@include keyframes(pulse) {
+  0% {
+    @include transform(translateY(-50%) scale(1));
+    opacity: 1;
+  }
+  40% {
+    @include transform(translateY(-50%) scale(0.9));
+    opacity: 0;
+  }
+  100% {
+    @include transform(translateY(-50%) scale(0));
+    opacity: 0;
+  }
+}
+
+
+/* -------------------------------- 
+Bubble Window
+-------------------------------- */
+
+.bubble {
+  width: 60%;
+  max-width: 600px;
+  margin: 12rem auto;
+  background: $white;
+  border-radius: 02rem;
+  padding: 1rem;
+  color: $gray;
+  @include MQ(L) {
+    width: 600px;
+  }
+}
+
+.name {
+  font-family: "Oswald", "Arial";
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  margin: 1.5rem auto;
+  @include MQ(M) {
+    font-size: 3.4rem;
+    font-weight: 300;
+  }
+  @include MQ(L) {
+    font-size: 5rem;
+  }
+}
+
+.info {
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 1.08rem;
+  margin-bottom: 1.8rem;
+}
+
+.circle {
+  display: block;
+  position: relative;
+  width: 14rem;
+  height: 14rem;
+  margin: -5rem auto 0 auto;
+  text-align: center;
+  overflow: hidden;
+  perspective: 1200px;
+  &:hover #circle-flip {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes flip {
+  10% {
+    transform: rotateY(180deg);
+  }
+  90% {
+    transform: rotateY(180deg);
+  }
+}
+
+#circle-flip {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 500ms;
+  animation: flip 3s;
+  animation-delay: 0.5s;
+}
+
+.avatar,
+.back,
+.bottom {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.circle {
+  .avatar {
+    background: url("../img/headshot-jason.jpg") 60% 27% $body-bg;
+    background-size: 100%;
+    border: 5px solid $white;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .back {
+    background: url("../img/mail.svg") no-repeat $lightgray;
+    background-size: 60%;
+    background-position: 40% 20%;
+    color: $gray;
+    line-height: 11rem;
+    font-family: "Roboto Condensed", "Arial";
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.08rem;
+    border-radius: 50%;
+    transform: rotateY(180deg);
+    padding-top: 30%;
+  }
+}

@@ -1,0 +1,44 @@
+// colors
+$body-bg: #485274; // dark blue
+$nav-container-bg: #000000; // black 
+$nav-bg: darken($body-bg, 10%);
+$main-text: #333;
+// prime colors
+$white: #ffffff; // white
+$lightgray: #f2f2f2; // light gray
+$midgray: #c1c1c1; // mid gray
+$gray: #666; // gray
+$darkgray: #313f47; // dark gray
+$blue: #52b5f2; // blue
+$lightblue: #add8e6; // light blue
+$green: #449662; // green
+$lightgreen: #f0fff9; // light green
+$lightred: #fdf7f4; // light red
+$black: #000;
+// mark colors
+$color-1: #c6e2ff; // Slate Gray
+$color-2: #f0f8ff; // Alice Blue
+$color-3: #add8e6; // Light blue
+$color-4: #5397c7; // Danube
+$color-5: #77cd91; // De York
+$color-6: #aebcb9; // Tower Gray
+$color-7: #0096a7; // Bondi Blue
+$color-8: #0d0d0d; // Cod Gray
+// fonts 
+$primary-font: 'Open Sans';
+$secondary-font: 'Droid Sans',
+sans-serif;
+// navigation
+$nav-height-S: 80px;
+$nav-height-M: 170px;
+$nav-items: 6;
+// animation 
+$animation-duration: 0.5s;
+// z-index
+$close-bio: 3;
+$main-zindex: 2;
+$bio-zindex: 1;
+// Width of the hidden author bio section
+$bio-width-S: 270px; // > 320px - see partials > _layout.scss
+$bio-width-M: 600px; // > 768px
+$bio-width-L: 800px; // > 1200px

@@ -1,11 +1,11 @@
 jQuery(document).ready(function($){
   
-	//toggle 3d navigation
+	//toggle navigation
 	$('.nav-trigger').on('click', function(){
-		toggle3dBlock(!$('.header').hasClass('nav-is-visible'));
+		toggleBlock(!$('.header').hasClass('nav-is-visible'));
 	});
 
-	//select a new item from the 3d navigation
+	//select a new item from the navigation
 	$('.nav').on('click', 'a', function(){
 		var selected = $(this);
 		selected.parent('li').addClass('selected').siblings('li').removeClass('selected');
@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
 		window.requestAnimationFrame(updateSelectedNav);
 	});
 
-	function toggle3dBlock(addOrRemove) {
+	function toggleBlock(addOrRemove) {
 		if(typeof(addOrRemove)==='undefined') addOrRemove = true;	
 		$('.header').toggleClass('nav-is-visible', addOrRemove);
 		$('.nav-container').toggleClass('nav-is-visible', addOrRemove);
@@ -34,12 +34,12 @@ jQuery(document).ready(function($){
 			backgroundColor = selectedItem.data('color'),
 			marker = $('.marker');
 
-		marker.removeClassPrefix('color').addClass('color').css({
+		marker.removeClassPrefix('color').addClass('color-'+ selectedItemPosition).css({
 			'left': leftPosition,
 		});
 		if( type == 'close') {
 			marker.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-				toggle3dBlock(false);
+				toggleBlock(false);
 			});
 		}
 	}
