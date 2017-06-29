@@ -3,6 +3,10 @@
 *::before {
   box-sizing: border-box; }
 
+*::after,
+*::before {
+  content: ''; }
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -14,7 +18,7 @@ body {
   font-size: 1.6rem;
   font-family: "Open Sans";
   color: #c6e2ff;
-  background-color: #add8e6; }
+  background-color: #0096a7; }
 
 a {
   text-decoration: none; }

@@ -1,27 +1,32 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    content: '';
 }
 
 html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  font: {
-    size: 1.6rem;
-    family: $primary-font; // variables inside partials > _variables.scss
-  }
-  color: $color-1;
-  background-color: $color-3;
+    font: {
+        size: 1.6rem;
+        family: $primary-font; // variables inside partials > _variables.scss
+    }
+    color: $color-1;
+    background-color: $color-7;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
